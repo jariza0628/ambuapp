@@ -25,11 +25,48 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('app', {
+  .state('home', {
+    url: '/home',
+    abstract: true,
+    templateUrl: 'templates/home.html',
+    controller: 'homeCtrl'
+  })
+
+  .state('home.login', {
+    url: '/login',
+    views: {
+      'homeContent': {
+        templateUrl: 'templates/login.html',
+        controller: 'homeCtrl'
+      }
+    }
+  })
+
+  .state('home.signup', {
+    url: '/signup',
+    views: {
+      'homeContent': {
+        templateUrl: 'templates/signup.html',
+        controller: 'homeCtrl'
+      }
+    }
+  })
+
+  .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
+  })
+
+   .state('app.main', {
+    url: '/main',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/main.html',
+        controller: 'MainCtrl'
+      }
+    }
   })
 
   .state('app.search', {
@@ -37,6 +74,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     views: {
       'menuContent': {
         templateUrl: 'templates/search.html'
+
+
       }
     }
   })
@@ -69,5 +108,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/home/login');
 });

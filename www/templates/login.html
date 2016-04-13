@@ -16,10 +16,18 @@
           <span class="input-label">Password</span>
           <input type="password" ng-model="loginData.password">
         </label>
-        <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
-        </label>
+        
       </div>
     </form>
+    <div class="row">
+      <div class="col">
+        <button class="button button-block button-energized" ng-click="submitLogin()">Ingresar</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <a class="button button-block button-energized" href="#/home/signup">Registrar</a>
+      </div>
+    </div>
   </ion-content>
 </ion-modal-view>
