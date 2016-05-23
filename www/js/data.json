@@ -1,0 +1,33 @@
+{
+  "hacer": [
+    {
+      "id": "1",
+      "titulo": "RCP",
+      "descripcion": "
+        1. Corrobore que el sitio sea seguro y recuerde el concepto de bioseguridad. 
+        2. Verifique que la victima esté boca arriba sobre una superficie plana y firme. 
+        3. Arrodíllese al lado de la victima.
+        4. Tómela de los hombros y, comprimiéndolos firmemente, pregúntele si se encuentra bien.
+        5. Si no responde, pida a alguien que llame a Emergencias.
+        6. Quite la ropa de la victima y observe atentamente su pecho por al menos
+        5 segundos y por no más de 10 , si no respira comience las compresiones.
+        7. Si la persona respira colóquela en la Posición Lateral de Seguridad. 
+        8. Si la persona no respira coloque la base de la palma de una mano en el centro del pecho, entre sus pezones. Apoye la base de la otra sobre la primera entrelazando los dedos y realice compresiones a una velocidad de al menos 100 por minuto.  
+        "
+    },     {
+      "id": "2",
+      "titulo": "CAÍDAS",
+      "descripcion": "
+        1. Corrobore que el sitio sea seguro y recuerde el concepto de bioseguridad. 
+        2. Verifique que la victima esté boca arriba sobre una superficie plana y firme. 
+        3. Arrodíllese al lado de la victima.
+        4. Tómela de los hombros y, comprimiéndolos firmemente, pregúntele si se encuentra bien.
+        5. Si no responde, pida a alguien que llame a Emergencias.
+        6. Quite la ropa de la victima y observe atentamente su pecho por al menos
+        5 segundos y por no más de 10 , si no respira comience las compresiones.
+        7. Si la persona respira colóquela en la Posición Lateral de Seguridad. 
+        8. Si la persona no respira coloque la base de la palma de una mano en el centro del pecho, entre sus pezones. Apoye la base de la otra sobre la primera entrelazando los dedos y realice compresiones a una velocidad de al menos 100 por minuto.  
+        "
+    }
+  ]
+}

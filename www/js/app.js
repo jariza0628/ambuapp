@@ -73,8 +73,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/search',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
-
+        templateUrl: 'templates/search.html',
+        controller: 'PlaylisstCtrl'
 
       }
     }
@@ -88,18 +88,26 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-    .state('app.playlists', {
-      url: '/playlists',
+    .state('app.carnet', {
+      url: '/carnet',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlists.html',
+          templateUrl: 'templates/carnet.html'
+        }
+      }
+    })
+    .state('app.guia', {
+      url: '/guia',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/guia.html',
           controller: 'PlaylistsCtrl'
         }
       }
     })
 
   .state('app.single', {
-    url: '/playlists/:playlistId',
+    url: '/playlist/:playlistId',
     views: {
       'menuContent': {
         templateUrl: 'templates/playlist.html',

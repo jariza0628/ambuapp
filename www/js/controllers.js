@@ -61,6 +61,7 @@ angular.module('starter.controllers', [])
     });
   }
 
+
  
       function initialize() {
         var myLatlng = new google.maps.LatLng(43.07493,-89.381388);
@@ -122,16 +123,43 @@ angular.module('starter.controllers', [])
 })
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+    { title: 'RCP', id: 1 },
+    { title: 'Caidas', id: 2 },
+    { title: 'Accidentes de transito', id: 3 },
+    { title: 'Cortadura', id: 4 },
+    { title: 'Envenenamientos', id: 5 },
+    { title: 'Paro cardiaco', id: 5 },
+    { title: 'Asfixia', id: 5 },
+    { title: 'Desmayo', id: 5 },
+    { title: 'Convulsiones', id: 6 }
+  ];
+})
+
+.controller('PlaylistCtrl', function($scope) {
+  $scope.playlist = [
+    
+    {
+      id: '1',
+      titulo: 'RCP',
+      descripcion: '1. Corrobore que el sitio sea seguro y recuerde el concepto de bioseguridad. 2. Verifique que la victima esté boca arriba sobre una superficie plana y firme.  3. Arrodíllese al lado de la victima. 4. Tómela de los hombros y, comprimiéndolos firmemente, pregúntele si se encuentra bien.5. Si no responde, pida a alguien que llame a Emergencias. 6. Quite la ropa de la victima y observe atentamente su pecho por al menos 5 segundos y por no más de 10 , si no respira comience las compresiones. 7. Si la persona respira colóquela en la Posición Lateral de Seguridad. 8. Si la persona no respira coloque la base de la palma de una mano en el centro del pecho, entre sus pezones. Apoye la base de la otra sobre la primera entrelazando los dedos y realice compresiones a una velocidad de al menos 100 por minuto.'
+    }, 
+    {
+      id: '2',
+      titulo: 'RCP',
+      descripcion: '1. Corrobore que el sitio sea seguro y recuerde el concepto de bioseguridad. 2. Verifique que la victima esté boca arriba sobre una superficie plana y firme.  3. Arrodíllese al lado de la victima. 4. Tómela de los hombros y, comprimiéndolos firmemente, pregúntele si se encuentra bien.5. Si no responde, pida a alguien que llame a Emergencias. 6. Quite la ropa de la victima y observe atentamente su pecho por al menos 5 segundos y por no más de 10 , si no respira comience las compresiones. 7. Si la persona respira colóquela en la Posición Lateral de Seguridad. 8. Si la persona no respira coloque la base de la palma de una mano en el centro del pecho, entre sus pezones. Apoye la base de la otra sobre la primera entrelazando los dedos y realice compresiones a una velocidad de al menos 100 por minuto.'
+    },     
+
   ];
 })
 
 
+.controller('PlaylisstCtrl', function($scope) {
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+  // A confirm dialog
+  $scope.showsolicitud = function() {
+    var alertPopup = $ionicPopup.alert({
+     title: 'Buscando ambulacia',
+     template: "<p style='text-align:center;'>Por favor espere...</p>"
+    });
+  }
 });
