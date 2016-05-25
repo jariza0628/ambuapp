@@ -10,3 +10,27 @@ margin: 0px;
 .scroll {
   height: 100%;
 }
+  .bar.bar-stable{
+    border-color: #e42112;
+    background-color: #ef473a;
+    background-image: linear-gradient(0deg, #e42112, #e42112 50%, transparent 50%);
+    color: #fff; 
+}
+.bar.bar-stable .title {
+    color: #FFF;
+}
+
+  .bar.bar-energized{
+    border-color: #e42112;
+    background-color: #ef473a;
+    background-image: linear-gradient(0deg, #e42112, #e42112 50%, transparent 50%);
+    color: #fff; 
+}
+.bar-footer {
+    background-color: #EF473A;
+    color: #fff;
+}
+.button.button-positive {
+   
+    background-color: #aaaaaa;
+}

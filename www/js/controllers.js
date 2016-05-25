@@ -64,7 +64,7 @@ angular.module('starter.controllers', [])
 
  
       function initialize() {
-        var myLatlng = new google.maps.LatLng(43.07493,-89.381388);
+        var myLatlng = new google.maps.LatLng(10.9794078,-74.7941095);
         
         var mapOptions = {
           center: myLatlng,
@@ -121,39 +121,128 @@ angular.module('starter.controllers', [])
    
   
 })
-.controller('PlaylistsCtrl', function($scope) {
+.controller('PlaylistsCtrl', function($scope,$rootScope, $state) {
   $scope.playlists = [
     { title: 'RCP', id: 1 },
     { title: 'Caidas', id: 2 },
     { title: 'Accidentes de transito', id: 3 },
     { title: 'Cortadura', id: 4 },
     { title: 'Envenenamientos', id: 5 },
-    { title: 'Paro cardiaco', id: 5 },
-    { title: 'Asfixia', id: 5 },
-    { title: 'Desmayo', id: 5 },
-    { title: 'Convulsiones', id: 6 }
+    { title: 'Paro cardiaco', id: 6},
+    { title: 'Asfixia', id: 7 },
+    { title: 'Desmayo', id: 8 },
+    { title: 'Convulsiones', id: 9 }
   ];
+
+    $scope.detail = function (ad_id){
+      console.log("hola " + ad_id)
+    $state.go('app.single', {"adId": ad_id});
+    
+  }
 })
 
-.controller('PlaylistCtrl', function($scope) {
-  $scope.playlist = [
-    
+.controller('PlaylistCtrl', function($scope,$rootScope, $filter, $ionicLoading, $stateParams, $state) {
+  
+   var found = $filter('filter')($rootScope.ads, {
+    id: parseInt($stateParams.adId)
+  }, true);
+   console.log("hola2 " + $stateParams.adId);
+
+   if ($stateParams.adId==1) {
+        $scope.playlist = [
     {
       id: '1',
       titulo: 'RCP',
       descripcion: '1. Corrobore que el sitio sea seguro y recuerde el concepto de bioseguridad. 2. Verifique que la victima esté boca arriba sobre una superficie plana y firme.  3. Arrodíllese al lado de la victima. 4. Tómela de los hombros y, comprimiéndolos firmemente, pregúntele si se encuentra bien.5. Si no responde, pida a alguien que llame a Emergencias. 6. Quite la ropa de la victima y observe atentamente su pecho por al menos 5 segundos y por no más de 10 , si no respira comience las compresiones. 7. Si la persona respira colóquela en la Posición Lateral de Seguridad. 8. Si la persona no respira coloque la base de la palma de una mano en el centro del pecho, entre sus pezones. Apoye la base de la otra sobre la primera entrelazando los dedos y realice compresiones a una velocidad de al menos 100 por minuto.'
-    }, 
+    }    
+   ];
+
+   }
+  if ($stateParams.adId==2) {
+        $scope.playlist = [
     {
       id: '2',
-      titulo: 'RCP',
-      descripcion: '1. Corrobore que el sitio sea seguro y recuerde el concepto de bioseguridad. 2. Verifique que la victima esté boca arriba sobre una superficie plana y firme.  3. Arrodíllese al lado de la victima. 4. Tómela de los hombros y, comprimiéndolos firmemente, pregúntele si se encuentra bien.5. Si no responde, pida a alguien que llame a Emergencias. 6. Quite la ropa de la victima y observe atentamente su pecho por al menos 5 segundos y por no más de 10 , si no respira comience las compresiones. 7. Si la persona respira colóquela en la Posición Lateral de Seguridad. 8. Si la persona no respira coloque la base de la palma de una mano en el centro del pecho, entre sus pezones. Apoye la base de la otra sobre la primera entrelazando los dedos y realice compresiones a una velocidad de al menos 100 por minuto.'
-    },     
+      titulo: 'Caidas',
+      descripcion: '1'
+    }    
+   ];
 
-  ];
+  }
+    if ($stateParams.adId==3) {
+        $scope.playlist = [
+    {
+      id: '2',
+      titulo: 'Accidentes de transito',
+      descripcion: '1'
+    }    
+   ];
+
+  }
+    if ($stateParams.adId==4) {
+        $scope.playlist = [
+    {
+      id: '2',
+      titulo: 'Cortaduras',
+      descripcion: '1'
+    }    
+   ];
+
+  }
+    if ($stateParams.adId==5) {
+        $scope.playlist = [
+    {
+      id: '2',
+      titulo: 'Quemaduras',
+      descripcion: '1'
+    }    
+   ];
+
+  }
+    if ($stateParams.adId==6) {
+        $scope.playlist = [
+    {
+      id: '2',
+      titulo: 'Envenenamiento',
+      descripcion: '1'
+    }    
+   ];
+
+  }
+    if ($stateParams.adId==7) {
+        $scope.playlist = [
+    {
+      id: '2',
+      titulo: 'Paro Cardiaco',
+      descripcion: '1'
+    }    
+   ];
+
+  }
+    if ($stateParams.adId==8) {
+        $scope.playlist = [
+    {
+      id: '2',
+      titulo: 'Asfixia',
+      descripcion: '1'
+    }    
+   ];
+
+  }
+    if ($stateParams.adId==9) {
+        $scope.playlist = [
+    {
+      id: '2',
+      titulo: 'Desamayo',
+      descripcion: '1'
+    }    
+   ];
+
+  }
+
 })
 
 
-.controller('PlaylisstCtrl', function($scope) {
+.controller('PlaylisstCtrl', function($scope,$ionicPopup) {
 
   // A confirm dialog
   $scope.showsolicitud = function() {
